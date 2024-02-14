@@ -236,7 +236,7 @@ async def delete_admin_handler(message: types.Message, state: FSMContext):
         await message.answer(text=userga.capitalize(), reply_markup=user_main_menu)
     await state.finish()
 
-@dp.message_handler(text="🏛➕ Sinf Qoshish")
+@dp.message_handler(text="🏛➕ Sinf qoshish")
 async def add_new_class_handler(message: types.Message, state: FSMContext):
     if await is_admin(message.chat.id):
         userga = f"😊✍️ Yangi Sinf Raqamini Kiriting."
@@ -418,11 +418,11 @@ async def sure_handler(message: types.Message, state: FSMContext):
         d = variantla["d"]
         true = variantla["true"]
         userga = f"""
-        📃❓ Savol: <b>{random_savol}</b>
-        A Variant: <b>{a}</b>
-        B Variant: <b>{b}</b>
-        D Variant: <b>{d}</b>
-        """
+📃❓ Savol: <b>{random_savol}</b>
+A Variant: <b>{a}</b>
+B Variant: <b>{b}</b>
+D Variant: <b>{d}</b>
+"""
         await state.update_data({
             "savol": random_savol,
             "book": data["book"],
@@ -483,7 +483,7 @@ async def really_delete_admin_handler(message: types.Message, state: FSMContext)
     await message.answer(text=adminga, reply_markup=admins_panel)
     await state.finish()
 
-@dp.message_handler(text="🏛➕  Gurux qoshish")
+@dp.message_handler(text="🏛➕ Gurux qoshish")
 async def add_group(message: types.Message, state: FSMContext):
     if await is_admin(chat_id=message.chat.id):
         userga = f"😊 Qaysi Sinfga Gurux Qoshmoqchisiz?"
